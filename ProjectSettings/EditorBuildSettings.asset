@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/timer.unity
+    guid: 61793ec76adcfb54389e14fd41005c40
   m_configObjects: {}
