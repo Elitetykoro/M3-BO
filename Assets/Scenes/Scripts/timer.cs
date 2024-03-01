@@ -7,7 +7,8 @@ public class timer : MonoBehaviour
 {
     private float CTime = 0;
     private bool active = true;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI CTtext;
+    [SerializeField] private TextMeshProUGUI HStext;
     
     
     // Update is called once per frame
@@ -17,6 +18,13 @@ public class timer : MonoBehaviour
         {
             CTime += Time.deltaTime;
         }
-        text.text = CTime.ToString();
+        CTtext.text = CTime.ToString();
+        HStext.text = PlayerPrefs.GetFloat("BestTime").ToString();
+
+        
+        
+        if (CTime > PlayerPrefs.GetFloat("BestTime", 0f)){
+            PlayerPrefs.SetFloat("BestTime", CTime);
+        }
     }
 }
