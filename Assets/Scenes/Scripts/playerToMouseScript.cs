@@ -1,16 +1,16 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerToMouseScript : MonoBehaviour
 {
-    Camera cam;
+    public Camera cam;
     void Start()
     {
-        cam = GameObject.Find("Main Camera").GetComponent<Camera>;
     }
     void FixedUpdate()
     {
         Vector3 mousePos = Input.mousePosition;
-        transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5));
+        transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 50));
     }
 }
