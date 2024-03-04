@@ -13,6 +13,7 @@ public class Death : MonoBehaviour
         {
             Debug.Log("death");
             TimerManager.GetComponent<timer>().Death();
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
     }
 }
