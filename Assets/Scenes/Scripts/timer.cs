@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,7 @@ public class timer : MonoBehaviour
 {
     private float CTime = 0;
     private bool active = true;
+    public float ETime;
     [SerializeField] private TextMeshProUGUI CTtext;
     [SerializeField] private TextMeshProUGUI HStext;
     
@@ -18,6 +20,7 @@ public class timer : MonoBehaviour
         {
             CTime += Time.deltaTime;
         }
+       
         CTtext.text = CTime.ToString();
         HStext.text = PlayerPrefs.GetFloat("BestTime").ToString();
 
@@ -26,5 +29,12 @@ public class timer : MonoBehaviour
         if (CTime > PlayerPrefs.GetFloat("BestTime", 0f)){
             PlayerPrefs.SetFloat("BestTime", CTime);
         }
+    }
+    public void Death()
+    {
+        active = false;
+        ETime = CTime;
+        PlayerPrefs.SetFloat("EndTime", ETime);
+        Debug.Log("timer stopped");
     }
 }
