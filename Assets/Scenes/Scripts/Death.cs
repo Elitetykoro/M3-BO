@@ -9,11 +9,13 @@ public class Death : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("lazer"))
+        if (other.CompareTag("lazer")||other.CompareTag("enemy"))
         {
             Debug.Log("death");
             TimerManager.GetComponent<timer>().Death();
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
+        
+
     }
 }

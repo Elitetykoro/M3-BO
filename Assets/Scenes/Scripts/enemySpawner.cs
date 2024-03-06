@@ -21,7 +21,7 @@ public class enemySpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(4f, 10f));
+            yield return new WaitForSeconds(Random.Range(3f, 5f));
             Instantiate(enemy,Spawner.position ,transform.rotation);
         }
     }
@@ -29,23 +29,23 @@ public class enemySpawner : MonoBehaviour
     {
         Spawner.position += velocity * Time.deltaTime;
         transform.LookAt(player.position);
-        if (Spawner.position.z >= 30)
+        if (Spawner.position.z >= 26)
         {
             z = velocity.z;
             velocity = new Vector3(velocity.x, 0, -velocity.z);
         }
-        if (Spawner.position.z <= -30)
+        if (Spawner.position.z <= -26)
         {
             velocity = new Vector3(velocity.x, 0, z);
         }
 
         Spawner.position += velocity * Time.deltaTime;
-        if (Spawner.position.x >= 54)
+        if (Spawner.position.x >= 50)
         {
             x = velocity.x;
             velocity = new Vector3(-velocity.x, 0, velocity.z);
         }
-        if (Spawner.position.x <= -54)
+        if (Spawner.position.x <= -50)
         {
             velocity = new Vector3(x, 0, velocity.z);
         }
