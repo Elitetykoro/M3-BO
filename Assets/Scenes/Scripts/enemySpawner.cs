@@ -9,8 +9,7 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Transform Spawner;
     public Vector3 velocity = new Vector3 ();
-    private float z;
-    private float x;
+    public float minSpeedRate = 3f, maxSpeedRate = 5f;
     void Start()
     {
         StartCoroutine("enemySpawn");
@@ -23,6 +22,8 @@ public class enemySpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(3f, 5f));
             Instantiate(enemy,Spawner.position ,transform.rotation);
+            minSpeedRate += -0.1f;
+            maxSpeedRate += -0.1f;
         }
     }
     void FixedUpdate()
@@ -31,23 +32,21 @@ public class enemySpawner : MonoBehaviour
         transform.LookAt(player.position);
         if (Spawner.position.z >= 26)
         {
-            z = velocity.z;
             velocity = new Vector3(velocity.x, 0, -velocity.z);
         }
         if (Spawner.position.z <= -26)
         {
-            velocity = new Vector3(velocity.x, 0, z);
+            velocity = new Vector3(velocity.x, 0, velocity.z*-1);
         }
 
         Spawner.position += velocity * Time.deltaTime;
         if (Spawner.position.x >= 50)
         {
-            x = velocity.x;
             velocity = new Vector3(-velocity.x, 0, velocity.z);
         }
         if (Spawner.position.x <= -50)
         {
-            velocity = new Vector3(x, 0, velocity.z);
+            velocity = new Vector3(velocity.x*-1, 0, velocity.z);
         }
     }
 }
