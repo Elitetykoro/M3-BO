@@ -9,8 +9,10 @@ public class lazermanager : MonoBehaviour
     [SerializeField] private GameObject LazerWarning;
     [SerializeField] private GameObject Lazer;
     [SerializeField] private Transform Player;
-    private float LazerSpawnTime;
+    [SerializeField] private AudioClip ShootSound;
+    private float LazerSpawnTime = 10f;
     private bool active = true;
+
     
     
     
@@ -24,7 +26,7 @@ public class lazermanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LazerSpawnTime = Random.Range(4f, 10f);
+        
     }
        
     
@@ -45,7 +47,10 @@ public class lazermanager : MonoBehaviour
             Lazer.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             Lazer.SetActive(false);
-            LazerSpawnTime = Random.Range(4f, 6f);
+            if(LazerSpawnTime > 2)
+            {
+               LazerSpawnTime = LazerSpawnTime - 0.1f;
+            }
         }
     }
    
