@@ -10,7 +10,8 @@ public class playerToMouseScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector3 mousePos = Input.mousePosition;
-        transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 49));
+        Vector3 position = (cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 49)) - transform.position) / 12;
+
+        transform.position += position;
     }
 }
