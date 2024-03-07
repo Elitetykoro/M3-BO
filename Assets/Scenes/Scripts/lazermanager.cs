@@ -45,6 +45,7 @@ public class lazermanager : MonoBehaviour
             Lazer.transform.position = LazerWarning.transform.position;
             Lazer.transform.rotation = LazerWarning.transform.rotation;
             Lazer.SetActive(true);
+            SoundManager.Instance.PlaySound(ShootSound);
             yield return new WaitForSeconds(0.5f);
             Lazer.SetActive(false);
             if(LazerSpawnTime > 2)

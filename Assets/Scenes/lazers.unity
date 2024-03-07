@@ -1286,15 +1286,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 554052593788062228, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -183.88704
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 554052593788062228, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.492754
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 554052593788062228, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -580.2987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 554052593788062228, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1322,6 +1322,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554052593788062228, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401937445141943541, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
+      propertyPath: MaxDistance
+      value: 551.06824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401937445141943541, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4386646314763283532, guid: a9e2cd9c0e447054cb21325af1059b9a, type: 3}
