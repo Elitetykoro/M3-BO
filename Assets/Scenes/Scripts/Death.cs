@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
-    [SerializeField] private GameObject TimerManager;
+    public GameObject TimerManager;
     
     void OnTriggerEnter(Collider other)
     {
