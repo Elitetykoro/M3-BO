@@ -10,7 +10,7 @@ public class lazermanager : MonoBehaviour
     [SerializeField] private GameObject Lazer;
     [SerializeField] private Transform Player;
     [SerializeField] private AudioClip ShootSound;
-    private float LazerSpawnTime = 10f;
+    private float LazerSpawnTime = 5f;
     private bool active = true;
 
     
