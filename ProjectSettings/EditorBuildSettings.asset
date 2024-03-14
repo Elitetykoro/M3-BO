@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/timer.unity
-    guid: 61793ec76adcfb54389e14fd41005c40
+    path: Assets/Scenes/MainMenu.unity
+    guid: c741f96411bfe384881eb5e178a0a1f4
+  - enabled: 1
+    path: Assets/Scenes/lazers.unity
+    guid: 6635f07d514229e499b0c370fc951be2
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 338d0dd015e77ae45a50ce00fe39d72b
   m_configObjects: {}

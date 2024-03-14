@@ -10,12 +10,16 @@ public class lazermanager : MonoBehaviour
     [SerializeField] private GameObject Lazer;
     [SerializeField] private Transform Player;
     [SerializeField] private AudioClip ShootSound;
-    private float LazerSpawnTime = 10f;
+    [SerializeField] private AudioClip LazerChargeSound;
+    private float LazerSpawnTime = 5f;
     private bool active = true;
+    public Animator animator;
 
-    
-    
-    
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,7 @@ public class lazermanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
        
     
@@ -37,14 +41,18 @@ public class lazermanager : MonoBehaviour
         while (active)
         {
             yield return new WaitForSeconds(LazerSpawnTime);
+            SoundManager.Instance.PlaySound(LazerChargeSound);
             LazerWarning.transform.position = Player.position;
             LazerWarning.transform.rotation = Quaternion.Euler(0, Random.Range(20, 160), 0);
             LazerWarning.SetActive(true);
+            animator.SetBool("isActive", true);
             yield return new WaitForSeconds(1.5f);
+            animator.SetBool("isActive", false);
             LazerWarning.SetActive(false);
             Lazer.transform.position = LazerWarning.transform.position;
             Lazer.transform.rotation = LazerWarning.transform.rotation;
             Lazer.SetActive(true);
+            SoundManager.Instance.PlaySound(ShootSound);
             yield return new WaitForSeconds(0.5f);
             Lazer.SetActive(false);
             if(LazerSpawnTime > 2)

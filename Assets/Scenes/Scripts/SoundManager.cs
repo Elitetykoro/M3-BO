@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource musicSource, FXSource;
+    [SerializeField] private AudioSource FXSource;
     public static SoundManager Instance;
     void Awake() {
         if (Instance == null){
