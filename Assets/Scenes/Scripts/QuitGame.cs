@@ -6,9 +6,10 @@ using UnityEditor;
 
 public class QuitGame : MonoBehaviour
 {
-    Vector3 Balloon = new Vector3(0,18,35);
+    Vector3 Balloon = new Vector3(0,18,23);
     [SerializeField] Transform balloonTransform;
     private float speed = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class QuitGame : MonoBehaviour
     void Update()
     {
         balloonTransform.position = Balloon;
-        Balloon.y += speed*Time.deltaTime;
+        Balloon.z += speed*Time.deltaTime;
     }
     public void Quit()
     {
@@ -33,6 +34,7 @@ public class QuitGame : MonoBehaviour
     public IEnumerator _QuitGame()
     {
         speed = 41;
+        
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("lazers",LoadSceneMode.Single);
     }

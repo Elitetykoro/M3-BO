@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrollManager : MonoBehaviour
 {
-    [SerializeField] float scrollspeed = 10;
+    public float scrollspeed = 10;
     private Vector3 ScrollerPos;
     // Start is called before the first frame update
     void Start()
