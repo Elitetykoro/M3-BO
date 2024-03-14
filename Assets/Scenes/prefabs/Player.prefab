@@ -209,6 +209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerManager: {fileID: 0}
+  Balloon: {fileID: 7674009499598003523}
+  BalloonString: {fileID: 1603948934600838246}
+  Explosion: {fileID: 0}
+  Boom: {fileID: 0}
 --- !u!136 &6898654363820359563
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -331,5 +335,10 @@ PrefabInstance:
 --- !u!4 &558725909720588512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ab375147117b7534d883b53f0b969318, type: 3}
+  m_PrefabInstance: {fileID: 20907472660104971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1603948934600838246 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: ab375147117b7534d883b53f0b969318, type: 3}
   m_PrefabInstance: {fileID: 20907472660104971}
   m_PrefabAsset: {fileID: 0}
