@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a8c5b5dbd063a4b826519b39af224e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 1516358216}
+  balloonTransform: {fileID: 1516358216}
 --- !u!1 &786698930
 GameObject:
   m_ObjectHideFlags: 0
