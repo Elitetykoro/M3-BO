@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -14,6 +15,10 @@ public class lazermanager : MonoBehaviour
     private float LazerSpawnTime = 5f;
     private bool active = true;
     public Animator animator;
+    [SerializeField] private CinemachineVirtualCamera Vcam;
+    [SerializeField] private CinemachineBasicMultiChannelPerlin noise;
+    [SerializeField] private float AST;
+    [SerializeField] private float INTS;
 
 
 
@@ -23,8 +28,11 @@ public class lazermanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        noise = Vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         StartCoroutine("LazerSpawn");
-        
+        //CamShakeOff();
+
+
     }
 
     // Update is called once per frame
@@ -32,10 +40,10 @@ public class lazermanager : MonoBehaviour
     {
 
     }
-       
-    
 
-    
+
+
+
     private IEnumerator LazerSpawn()
     {
         while (active)
@@ -53,13 +61,30 @@ public class lazermanager : MonoBehaviour
             Lazer.transform.rotation = LazerWarning.transform.rotation;
             Lazer.SetActive(true);
             SoundManager.Instance.PlaySound(ShootSound);
+            CamShake(INTS, AST);
             yield return new WaitForSeconds(0.5f);
+
             Lazer.SetActive(false);
-            if(LazerSpawnTime > 2)
+            if (LazerSpawnTime > 2)
             {
-               LazerSpawnTime = LazerSpawnTime - 0.1f;
+                LazerSpawnTime = LazerSpawnTime - 0.1f;
             }
         }
     }
-   
+    private void CamShake(float Intensity, float ShakeTime)
+    {
+        noise.m_AmplitudeGain = Intensity;
+        StartCoroutine(ShakeTimeManager(ShakeTime));
+    }
+
+    IEnumerator ShakeTimeManager(float ShakeTime)
+    {
+        yield return new WaitForSeconds(ShakeTime);
+        CamShakeOff();
+    }
+    private void CamShakeOff()
+    {
+        noise.m_AmplitudeGain = 0;
+    }
+
 }
