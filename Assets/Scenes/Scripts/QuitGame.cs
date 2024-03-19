@@ -33,7 +33,7 @@ public class QuitGame : MonoBehaviour
     }
     public IEnumerator _QuitGame()
     {
-        speed = 41;
+        speed = 48f;
         
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("lazers",LoadSceneMode.Single);

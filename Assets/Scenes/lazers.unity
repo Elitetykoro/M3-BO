@@ -925,6 +925,7 @@ GameObject:
   - component: {fileID: 316036232}
   - component: {fileID: 316036231}
   - component: {fileID: 316036230}
+  - component: {fileID: 316036233}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1008,6 +1009,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &316036233
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316036228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &316398485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1604,10 @@ MonoBehaviour:
   ShootSound: {fileID: 8300000, guid: 2431800d84dfc0c4e8637ed8bf66c259, type: 3}
   LazerChargeSound: {fileID: 8300000, guid: 078a84fe395afb34685c80e1697d50b0, type: 3}
   animator: {fileID: 469733060}
+  Vcam: {fileID: 1613547690}
+  noise: {fileID: 0}
+  AST: 0.2
+  INTS: 10
 --- !u!4 &600565869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4705353422544444085, guid: 4c9468e365dcc9e4da7353766625ba30, type: 3}
