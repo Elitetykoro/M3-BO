@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +24,20 @@ public class Death : MonoBehaviour
             }
         }
         
+
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("lazer") || other.gameObject.CompareTag("enemy"))
+        {
+            Debug.Log("death");
+            if (!isDead)
+            {
+                isDead = true;
+                StartCoroutine("BaloonExplosion");
+            }
+        }
+
 
     }
 
