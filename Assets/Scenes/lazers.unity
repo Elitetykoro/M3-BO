@@ -2284,11 +2284,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &1216995563
@@ -3467,10 +3467,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerManager: {fileID: 1668303417}
-  Balloon: {fileID: 0}
-  BalloonString: {fileID: 0}
-  Explosion: {fileID: 0}
-  Boom: {fileID: 0}
+  Balloon: {fileID: 2021192021}
+  BalloonString: {fileID: 1233551878}
+  Explosion: {fileID: 600565871}
+  Boom: {fileID: 8300000, guid: bf2fd4921b3b5c54488722f105ba2cff, type: 3}
 --- !u!136 &2021192017
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3807,8 +3807,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 314221837}
     m_RemovedComponents:
-    - {fileID: 5852197013355419125, guid: aef8a338d377091408aeba2f769bbaac, type: 3}
-    - {fileID: 1564419640896318070, guid: aef8a338d377091408aeba2f769bbaac, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 4383672773340470331, guid: aef8a338d377091408aeba2f769bbaac, type: 3}
     m_AddedGameObjects:
