@@ -1183,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7485220645323966888, guid: 74bbeef4926dd584eafc86038791bd1c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1858,7 +1858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7953657646852254965, guid: ad0f036a1648c7448bcfdd3de861d21d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1879,7 +1879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4724023259358989758, guid: e5b0d26909d7af340b58ec2d1d1ef3dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7337298709981935249, guid: e5b0d26909d7af340b58ec2d1d1ef3dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2872,7 +2872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8277176822470045156, guid: dea8133d72c2cbb41a5297ee96958e3b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3491,9 +3491,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Height: 2
+  m_Height: 3.2861679
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.64308393, z: 0}
 --- !u!23 &2021192021 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7674009499598003523, guid: aef8a338d377091408aeba2f769bbaac, type: 3}
